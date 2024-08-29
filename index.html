@@ -4,78 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon"> <!-- favicon -->
+
 </head>
 <body>
     <header>
-        <nav id="navbar"> <!-- Adicione o ID 'navbar' aqui -->
+        <nav id="navbar"> <!-- ID 'navbar'  -->
+            <a href="#" class="logo"> 
+                <img src="images/logo.jpg" alt="Logo" /><!-- Logo Navbar  -->
+            </a>
+            <!-- Links Navbar  -->
             <ul>
                 <li><a href="#sobre-mim">Sobre Mim</a></li>
                 <li><a href="#formacao">Formação</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="hero-banner">
-        <div class="hero-content">
+    <!-- herobanner  -->
+    <div class="herobanner">
+        <div class="herobanner-image"></div>
+        <div class="herobanner-content">
             <h1>Bem-vindo ao Meu Mundo</h1>
             <p>Desenvolvedor Web | Criador de Soluções | Inovador</p>
             <a href="#sobre-mim" class="cta-button">Saiba Mais</a>
         </div>
-    </section>
+    </div>
 
+
+    <!-- seção sobre mim  -->
     <section id="sobre-mim">
-        <h1>Sobre Mim</h1>
+        <h1 class="h1">Sobre Mim</h1>
         <p> 
             Meu nome é Fabio de Sena e curso Engenharia de Software. Tenho uma sólida experiência em desenvolvimento web, tanto no front-end quanto no back-end, e sou apaixonado por inovação, tecnologia e por tudo que faz a internet funcionar. Sou autodidata em WordPress, onde desenvolvi diversos sites personalizados e otimizados para SEO, no front-end domino a tríade fundamental de HTML, CSS e JavaScript e tenho conhecimento em React. Esses conhecimentos me permitem criar interfaces intuitivas e responsivas, garantindo uma excelente experiência ao usuário. No back-end, possuo grande conhecimento na linguagem Ruby e em seu framework Rails, o que me capacita a desenvolver aplicações robustas, escaláveis e seguras. Também tenho experiência em Python, utilizando-o para automação de processos, desenvolvimento de APIs e outras soluções específicas. Além disso, sou especialista em e-commerce, desde a criação de lojas virtuais completas até a integração com gateways de pagamento e sistemas de gerenciamento de pedidos e logística. Combinando minhas habilidades em desenvolvimento e minha paixão por tecnologia, ajudo empresas a estabelecerem uma presença digital forte e eficiente, impulsionando seus negócios no ambiente online. Se você é proprietário de uma empresa e deseja desenvolver um aplicativo, criar um site ou lançar um e-commerce de sucesso, entre em contato. Juntos, vamos transformar suas ideias em realidade e consolidar sua presença no mundo digital!
         </p>
     </section>
-
+    <!-- seção formação  -->
     <section id="formacao">
-        <h1>Formação</h1>
+        <h1 class="h1">Formação</h1>
         <p>
             Minha trajetória acadêmica e profissional começou com a formação em Comércio Exterior, concluída em 2018. Durante esse período, adquiri uma compreensão profunda das dinâmicas globais de comércio e negócios, o que me levou a buscar uma especialização em Gestão Empresarial. Em 2021, finalizei meu MBA nessa área, onde os conhecimentos adquiridos foram fundamentais para a minha atuação como Diretor de Operações durante mais de 10 anos em uma grande empresa do setor agrícola. Nessa função, apliquei práticas avançadas de gestão e estratégias empresariais, contribuindo para o crescimento e eficiência da organização. No entanto, em 2023, decidi redirecionar minha carreira para a área de tecnologia, uma paixão de longa data. Iniciei o curso de Engenharia de Software, aprofundando meus conhecimentos em desenvolvimento de sistemas e soluções tecnológicas. Paralelamente, me dediquei a uma série de cursos focados em linguagens de programação e tecnologias essenciais para o desenvolvimento web. Aprendi HTML, CSS e JavaScript para o Front-End, o que me permitiu criar interfaces modernas e funcionais. No Back-End, me especializei em Ruby e em seu framework Rails, desenvolvendo habilidades para construir aplicações robustas e escaláveis. Essa combinação de conhecimentos em gestão e tecnologia me proporciona uma visão única para desenvolver soluções inovadoras e eficientes, sempre alinhadas às necessidades de negócios e ao avanço tecnológico.
         </p>
     </section>
 
+    <!-- seção portfólio  -->
     <section id="portfolio">
-        <h1>Projetos Recentes</h1>
-        <p>Adicione links para sites ou projetos que você desenvolveu.</p>
-        <div class="portfolio-item">
-            <img src="img/projeto1.jpg" alt="Projeto 1">
-            <h2>Projeto 1</h2>
-            <p>Site de marketing completo com animações personalizadas para LibMKT. Construído com Wordpress.</p>
-
-            <p>Ferramentas de Desenvolvimento</p>
-                
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>WordPress</li>
-                <li>Hooks</li>
-                <li>API Google</li>
-            </ul>
-
-            <a href="#">Ver Projeto</a>
+        <h1 class="h1">Projetos Recentes</h1>
+        <div id="portfolio_1">
+            <div class="portfolio-item">
+                <div class="img">
+                    <img src="/images/portfolio.png" alt="site-libymkt">
+                </div>
+                <div>
+                <h2>LibyMKT</h2>
+                <p>Site para Agência de Marketing.</p>
+                </div>
+                <div>
+                    <h3>Ferramentas de Desenvolvimento</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>WordPress</li>
+                    <li>Hooks</li>
+                    <li>API Google</li>
+                </ul>
+                    <div>
+                        <a class="cta-button-portfolio" href="https://libymkt.com.br/" target="_blank">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio_2">
+            <div class="portfolio-item">
+                <div class="img">
+                    <img src="/images/dev_burguer.png" alt="cardapio-on-line">
+                </div>
+                <div>
+                <h2>Dev Burguer</h2>
+                <p>Cardápio On Line para pedidos de lanche integrado ao Whatsapp.</p>
+                </div>
+                <div>
+                    <h3>Ferramentas de Desenvolvimento</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TailwindCSS</li>
+                    <li>WhatsApp</li>
+                </ul>
+                    <div>
+                        <a class="cta-button-portfolio" href="https://projeto-cardapio-three.vercel.app/" target="_blank">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio_3">
+            <div class="portfolio-item">
+                <div class="img">
+                    <img src="/images/pizzaria.png" alt="site-pizzaria"></src>
+                </div>
+                <div>
+                <h2>Pizzaria</h2>
+                <p>Site de pizzaria com venda de planos de assinatura mensal e área de cliente.</p>
+                </div>
+                <div>
+                    <h3>Ferramentas de Desenvolvimento</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Jquery</li>
+                        <li>Figma</li>
+                        <li>API Google Maps</li>
+                    </ul>
+                    <div>
+                        <a class="cta-button-portfolio" href="https://site-pizzaria-steel.vercel.app/" target="_blank">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
+    <!-- formulário  -->
+    <main>
+        <section id="contato">
+            <h1>CRIAMOS SUA PRESENÇA NO DIGITAL!</h1>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <!-- contato  -->
+    <div id="contact-links-container">
+        <div id="contact">
+            <h4>CONTATO</h4>
+            <p>Telefone: (11) 95421 - 6964</p>
+            <p>Email: fabiodesenamiranda@hotmail.com</p>
+        </div>
+        <div id="links">
+            <a href="https://www.linkedin.com/in/fabio-de-sena-miranda/" target="_blank">
+                <img src="/images/linkedin.png" alt="LinkedIn" width="30" height="30">
+            </a>
+            <a href="https://github.com/fabiodesenamiranda" target="_blank">
+                <img src="/images/github.png" alt="GitHub" width="30" height="30">
+            </a>
+        </div>
+    </div>
+    <!-- footer  -->
     <footer>
         <p>&copy; 2024 Fabio de Sena. Todos os direitos reservados</p>
     </footer>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            var navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {  // Verifica se o usuário rolou mais de 50px
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
     </script>
 </body>
 </html>

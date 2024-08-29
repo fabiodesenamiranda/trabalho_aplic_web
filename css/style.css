@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+    overflow-x: hidden;
 }
 
 body {
@@ -18,10 +18,10 @@ body {
 /* Cabeçalho e Navegação */
 header {
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     position: fixed;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #fff;
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
@@ -29,40 +29,44 @@ header {
 
 /* Barra de Navegação */
 #navbar {
-    position: fixed;
-    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     width: 100%;
-    background-color: transparent; /* Inicialmente transparente */
+    background-color: transparent;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-    padding: 20px 0;
 }
 
-#navbar.scrolled {
-    background-color: #fff; /* Cor de fundo ao rolar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao rolar */
-    padding: 10px 0;
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 40px;
+    width: auto;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
     padding: 0;
-    margin: 0;
+    margin: 0 50px;
+    display: flex;
+    gap: 15px;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 15px;
+    display: inline;
 }
 
 nav ul li a {
-    color: #333; /* Cor do texto */
+    color: #333;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    padding: 5px;
     text-transform: uppercase;
+    padding: 5px;
 }
 
 nav ul li a:hover {
@@ -70,54 +74,80 @@ nav ul li a:hover {
 }
 
 /* Hero Banner */
-#hero-banner {
-    width: 100vw; /* Ocupa toda a largura da tela */
-    height: 100vh; /* Ocupa toda a altura da tela */
-    background-image: url('sua-imagem-de-fundo.jpg'); /* Caminho para sua imagem */
-    background-size: cover; /* Cobre todo o banner com a imagem */
-    background-position: center; /* Centraliza a imagem */
+.herobanner {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: rgb(239, 64, 47);
+}
+
+.herobanner-image {
+    flex: 1;
+    background-image: url('/images/imagem.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.herobanner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background: rgb(239, 64, 47);
+}
+
+.herobanner-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: black;
+    text-align: left;
+}
+
+/* Botão de Ação */
+.cta-button {
+    margin: 20px 0 0;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
-}
-
-#hero-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Sobreposição para legibilidade */
-    z-index: -1;
-}
-
-/* Botão de Ação (Call to Action) */
-.cta-button {
-    background-color: #007aff;
-    color: #ffffff;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #005bb5;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3px);
 }
 
+/* Títulos das Seções */
+.h1 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #E01438;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
 /* Seções */
 section {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 100px auto;
     padding: 0 20px;
 }
@@ -131,72 +161,287 @@ section h1 {
 }
 
 section p {
-    font-size: 18px;
-    color: #555555;
-    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000;
+    text-align: left;
     margin-bottom: 40px;
 }
+
+/* Portfólio */
+.portfolio-item {
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+}
+
+.portfolio-item p {
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+}
+
+#portfolio_1, #portfolio_2, #portfolio_3 {
+    display: flex;
+    background-color: #666;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 60px;
+}
+
+#portfolio_2 {
+    background-color: #005bb5;
+}
+
+#portfolio_3 {
+    background-color: #002134;
+}
+
+/* Imagens do Portfólio */
+.img {
+    width: 50%;
+    height: auto;
+}
+
+.portfolio-item {
+    display: flex;
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.portfolio-item h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item ul li {
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botão do Portfólio */
+.cta-button-portfolio {
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Roboto Mono", monospace;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Formulário de Contato */
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 500px;
-    margin: 0 auto;
+    gap: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+}
+
+#contato h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 2em;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 label {
+    font-family: "Roboto Mono", monospace;
     font-size: 16px;
-    font-weight: 500;
-    color: #1a1a1a;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 input,
 textarea {
+    font-family: "Roboto Mono", monospace;
     width: 100%;
     padding: 15px;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
+    border: 1px solid #000;
     font-size: 16px;
-    color: #1a1a1a;
-    background-color: #ffffff;
-    transition: border-color 0.3s ease;
+    color: #000;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
     border-color: #007aff;
+    box-shadow: 0px 0px 8px rgba(0, 122, 255, 0.2);
     outline: none;
 }
 
-button {
-    background-color: #007aff;
-    color: #ffffff;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
-button:hover {
-    background-color: #005bb5;
-    transform: translateY(-3px);
+button {
+    margin-top: 40px;
+    width: 105%;
+    height: 50px;
+    background-color: transparent;
+    color: #000;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
 }
+
+/* Contato */
+
+#contact-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#contact, #links {
+    flex: 1;
+    padding: 20px;
+}
+
+#contact {
+    text-align: right;
+}
+
+#links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+#links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+#links a img:hover {
+    transform: scale(1.1); 
+}
+
+
 
 /* Rodapé */
 footer {
-    background-color: #f5f5f5;
-    color: #555555;
+    background-color: #fff;
+    color: #666;
     text-align: center;
-    padding: 30px 20px;
+    padding: 10px;
     margin-top: 100px;
     font-size: 14px;
 }
 
 footer p {
     margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .herobanner {
+        flex-direction: column;
+    }
+
+    .herobanner-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .herobanner-content h1 {
+        font-size: 36px;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-item h2 {
+        font-size: 20px;
+    }
+
+    .portfolio-item p {
+        font-size: 14px;
+    }
+
+    .portfolio-item ul li {
+        font-size: 12px;
+    }
 }
